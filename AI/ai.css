@@ -59,9 +59,9 @@ body {
     align-self: self-start;
     height: min-content;
     margin: 10px 0 10px 0;
-    padding: 3px 15px 5px 15px;
+    padding: 12px 20px 12px 20px;
     border-radius: 18px 18px 18px 0;
-    background-color: #303030;
+    background-color: #272727;
 }
 
 .response-box {
@@ -73,6 +73,6 @@ body {
     margin: 20px 0 20px 0;
     padding: 12px 20px 0px 20px;
     border-radius: 18px 18px 18px 0;
-    background-color: #303030;
+    background-color: #272727;
 }
 
