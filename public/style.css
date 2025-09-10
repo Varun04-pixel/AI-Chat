@@ -1,0 +1,78 @@
+body {
+    background-color: #212121;
+    color: rgb(212, 212, 212);
+    padding-bottom: 15%;
+}
+
+.navigation-bar {
+    max-width: 100%;
+    height: 20px;
+}
+
+.container-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.default-content {
+    margin-top: 25%;
+    text-shadow: #0066ff 0 0 10px;
+}
+
+.input-box {
+    background-color: #333333;
+    max-width: 100%;
+    position: fixed;
+    bottom: 5%;
+    right: 15%;
+    left: 15%;
+}
+
+.form-control::placeholder {
+  color: rgb(168, 168, 168);
+  opacity: 70%;
+}
+
+.ai-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.user-content-box {
+    display: block;
+    word-wrap: break-word;
+    max-width: 80%;
+    align-self: self-end;
+    text-align: left;
+    height: min-content;
+    padding: 8px 15px 8px 15px;
+    border-radius: 18px 18px 0 18px;
+    background-color: #303030;
+}
+
+.wait-box {
+    display: block;
+    align-self: self-start;
+    height: min-content;
+    margin: 10px 0 10px 0;
+    padding: 12px 20px 12px 20px;
+    border-radius: 18px 18px 18px 0;
+    background-color: #272727;
+}
+
+.response-box {
+    display: block;
+    max-width: 80%;
+    align-self: self-start;
+    text-align: left;
+    height: min-content;
+    margin: 20px 0 20px 0;
+    padding: 12px 20px 0px 20px;
+    border-radius: 18px 18px 18px 0;
+    background-color: #272727;
+}
+

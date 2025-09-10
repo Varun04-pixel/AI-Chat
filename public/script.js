@@ -1,9 +1,8 @@
-const gemini_api_key = your_api_key_here; // Replace with your actual API key
 const userInput = document.getElementById("user-input");
 const button = document.getElementById("send-button");
 const default_header = document.getElementById("header");
 const content_box = document.getElementById("ai-content");
-const history = [];
+const history = [{role: "user", parts: [{ text: "i am varun, always refer my name in response" }]}];
 
 userInput.focus();
 button.addEventListener("click", function () {
@@ -36,18 +35,13 @@ async function aiResponse() {
   wait_box.className = "wait-box";
   content_box.appendChild(wait_box);
   wait(wait_box);
-  let response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${gemini_api_key}`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        contents: history,
-      }),
-    }
-  );
+  let response = await fetch('/api/response', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({contents: history})
+  })
   let data = await response.json();
   wait_box.remove();
   let markedformat = data.candidates[0].content.parts[0].text;
