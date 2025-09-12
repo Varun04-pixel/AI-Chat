@@ -16,7 +16,7 @@ It allows users to type in queries and get real-time AI-generated responses.
 
 ## 🖼️ Demo
 
-![App Screenshot](./public/demo.png)
+![App Screenshot](./public/image.png)
 
 ---
 
