@@ -4,6 +4,7 @@ const default_header = document.getElementById("header");
 const content_box = document.getElementById("ai-content");
 const history = [{ role: "user", parts: [{ text: "i am varun, always refer my name in response" }] }];
 
+// 1. Improved Marked Configuration
 marked.setOptions({
     highlight: function (code, lang) {
         if (lang && hljs.getLanguage(lang)) {
@@ -11,7 +12,8 @@ marked.setOptions({
         }
         return hljs.highlightAuto(code).value;
     },
-    breaks: true
+    breaks: true,
+    gfm: true
 });
 
 button.addEventListener("click", function () {
@@ -58,7 +60,7 @@ async function aiResponse() {
         renderAIResponse(rawText);
     } catch (err) {
         clearInterval(waitTimer);
-        wait_box.remove();
+        if(wait_box) wait_box.remove();
         console.error("Error:", err);
     }
 }
@@ -71,7 +73,13 @@ function renderAIResponse(text) {
     let html = marked.parse(text);
     response_container.innerHTML = DOMPurify.sanitize(html);
     
-    // Wrap all <pre> tags in a div and add copy button
+    // 2. TRIGGER THE COLORS: Highlight all code blocks found in the response
+    const codeBlocks = response_container.querySelectorAll('pre code');
+    codeBlocks.forEach((block) => {
+        hljs.highlightElement(block);
+    });
+    
+    // 3. Add Copy Buttons and Wrapper logic
     const preTags = response_container.querySelectorAll('pre');
     preTags.forEach((pre) => {
         // Create wrapper
@@ -89,10 +97,10 @@ function renderAIResponse(text) {
             const code = pre.querySelector('code').innerText;
             navigator.clipboard.writeText(code).then(() => {
                 copyBtn.innerText = 'Copied!';
-                copyBtn.classList.add('secondary');
+                copyBtn.classList.add('secondary'); 
                 setTimeout(() => {
                     copyBtn.innerText = 'Copy';
-                    copyBtn.classList.remove('secondary');
+                    copyBtn.classList.add(''); 
                 }, 2000);
             });
         });
