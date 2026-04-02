@@ -3,8 +3,6 @@
 An interactive AI chat application built with **Node.js**, **Express**, and **Gemini API**.  
 It allows users to type in queries and get real-time AI-generated responses.
 
----
-
 ## Features
 - Simple and clean **chat UI**.
 - AI remembers the conversation history.
@@ -12,14 +10,10 @@ It allows users to type in queries and get real-time AI-generated responses.
 - Shows a **"Generating..."** animation while waiting for replies.
 - Supports **Enter key** to send messages quickly.
 
----
-
-## Live Demo
+## 🔗 Live Demo
 [AI-async](https://ai-async.onrender.com)
 
 ![App Screenshot](./public/image.png)
-
----
 
 ## ⚙️ Setup
 
