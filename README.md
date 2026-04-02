@@ -5,7 +5,7 @@ It allows users to type in queries and get real-time AI-generated responses.
 
 ---
 
-## 🚀 Features
+## Features
 - Simple and clean **chat UI**.
 - AI remembers the conversation history.
 - **Markdown support** for formatted responses.
@@ -14,7 +14,8 @@ It allows users to type in queries and get real-time AI-generated responses.
 
 ---
 
-## 🖼️ Demo
+## Live Demo
+[AI-async](https://ai-async.onrender.com)
 
 ![App Screenshot](./public/image.png)
 
