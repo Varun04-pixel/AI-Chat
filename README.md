@@ -7,8 +7,7 @@ It allows users to type in queries and get real-time AI-generated responses.
 - Simple and clean **chat UI**.
 - AI remembers the conversation history.
 - **Markdown support** for formatted responses.
-- Shows a **"Generating..."** animation while waiting for replies.
-- Supports **Enter key** to send messages quickly.
+- No storing of conversation.
 
 ## 🔗 Live Demo
 [AI-async](https://ai-async.onrender.com)
